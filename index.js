@@ -17,7 +17,7 @@ for (const post of posts) {
                     ${post.content.slice(0, 100)}${post.content.length > 100 ? "..." : ""}
                 </p>
             </div>
-            <a href="#" class="btn btn-primary">Read more</a>
+            <a href="read.html?timestamp=${post.timestamp}" class="btn btn-primary">Read more</a>
         </div> 
       </div> <!-- end of card -->
     </div> <!-- end of col-4 -->`;
