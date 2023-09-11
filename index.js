@@ -23,3 +23,9 @@ for (const post of posts) {
     </div> <!-- end of col-4 -->`;
 }
 postDiv.innerHTML = generatedHTML;
+
+if (window.localStorage.isLoggedIn === "true") {
+    document.getElementById("actionLinks").innerHTML = `<a href="newPost.html">New Post</a>`;
+} else {
+    document.getElementById("actionLinks").innerHTML = `<a href="login.html">Login</a>`; 
+}
