@@ -16,3 +16,8 @@ h1 {
     margin-bottom: 10px;
 }
 
+#logout {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}

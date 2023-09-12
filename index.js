@@ -25,7 +25,12 @@ for (const post of posts) {
 postDiv.innerHTML = generatedHTML;
 
 if (window.localStorage.isLoggedIn === "true") {
-    document.getElementById("actionLinks").innerHTML = `<a href="newPost.html">New Post</a>`;
+    document.getElementById("actionLinks").innerHTML = `<a href="newPost.html">New Post</a> | <a onclick="logout(event)" id="logout">Logout</a>`;
 } else {
+    document.getElementById("actionLinks").innerHTML = `<a href="login.html">Login</a>`; 
+}
+
+const logout = (event) => {
+    window.localStorage.removeItem("isLoggedIn");
     document.getElementById("actionLinks").innerHTML = `<a href="login.html">Login</a>`; 
 }

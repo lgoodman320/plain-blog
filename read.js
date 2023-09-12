@@ -23,4 +23,19 @@ document.getElementById("postContent").innerHTML = `
         <hr />
         <p>${matchingPost.content}</p>`;
 
+const deletePost = (event) => {
+    if (window.confirm("Are you sure you want to delete this post?")) {
+        const postJSON = window.localStorage.getItem("posts");
+        const posts = JSON.parse(postJSON);
+
+        const updatedPosts = posts.filter(
+            (postFilter) => postFilter.timestamp != dateID
+        );
+        
+        const updatedJSON = JSON.stringify(updatedPosts);
+        window.localStorage.setItem("posts", updatedJSON);
+        window.location = "/";
+    }
+};
+
 console.log(matchingPost);
